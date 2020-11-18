@@ -1,0 +1,24 @@
+<div class="container">
+
+  <h1><%= @flat.name %></h1>
+
+  <ul class="list-group">
+    <p>Photo :</p>
+    <li class="list-group-item">
+      <%= link_to "Photo", @flat.picture_url %>
+      <%= image_tag @flat.picture_url, alt: "House picture" %>
+    </li>
+    <p>Description :</p>
+    <li class="list-group-item"> <%= @flat.description %> </li>
+    <p>Address :</p>
+    <li class="list-group-item"> <%= @flat.address %> </li>
+    <p>Price per night :</p>
+    <li class="list-group-item"> <%= @flat.price_per_night %> </li>
+    <p>Number of guest :</p>
+    <li class="list-group-item"> <%= @flat.number_of_guest %> </li>
+  </ul>
+
+<br>
+<%= link_to "Back", flats_path, class: "btn btn-primary"  %>
+<%= link_to "Edit a flat", edit_flat_path, class: "btn btn-primary"  %>
+</div>

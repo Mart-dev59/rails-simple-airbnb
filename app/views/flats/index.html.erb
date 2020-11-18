@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>All flats</h1>
+
+  <ul>
+    <% @flats.each do |flat| %>
+    <li class="list-group-item">
+      <%= link_to flat.name, flat %>
+      <br>
+    <%= link_to "Delete",
+      flat_path(flat), class: "btn btn-primary",
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+   </li>
+    <% end %>
+  </ul>
+
+<%= link_to "Add new flat", new_flat_path, class: "btn btn-primary"  %>
+</div>
